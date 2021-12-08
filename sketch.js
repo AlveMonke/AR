@@ -3,7 +3,7 @@ if (navigator.geolocation) {
         let useLat = e.coords.latitude;
         let useLong = e.coords.longitude;
         
-        document.body.innerHTML += `<a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: ${useLong}; latitude: ${useLat};" animation-mixer />`;
+        document.querySelector("a-scene").innerHTML += `<a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: ${useLong}; latitude: ${useLat};" animation-mixer />`;
 
 //         let key = "AHxoFnjGGgGyfjAA9kaQdpC3ID2AZ9dG";
 
