@@ -11,6 +11,7 @@
             THREEx.ArToolkitContext.baseURL =
                 "https://raw.githack.com/jeromeetienne/ar.js/master/three.js/";
         </script>
+        <script src="sketch.js" defer></script>
     </head>
 
     <body style="margin: 0; overflow: hidden">
@@ -21,6 +22,7 @@
         >
             <a-camera gps-camera rotation-reader></a-camera>
             <a-entity
+                crossOrigin="anonymous"
                 gltf-model="./assets/magnemite/scene.gltf"
                 rotation="0 180 0"
                 scale="0.15 0.15 0.15"
