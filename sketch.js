@@ -5,9 +5,21 @@ if (navigator.geolocation) {
 
         console.log(document.querySelector("a-scene"));
 
-        document.querySelector(
-            "a-scene"
-        ).innerHTML += `<a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: ${useLong}; latitude: ${useLat};" animation-mixer look-at="[gps-camera]"/>`;
+        // let ent = document.createElement("a-entity");
+        // ent.setAttribute("gltf-model", "./assets/magnemite/scene.gltf");
+        // ent.setAttribute("rotation", "0 180 0");
+        // ent.setAttribute("gltf-model", "./assets/magnemite/scene.gltf");
+
+        // document.querySelector(
+        //     "a-scene"
+        // ).innerHTML += `<a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: ${useLong}; latitude: ${useLat};" animation-mixer look-at="[gps-camera]"/>`;
+
+        document.querySelector("a-scene").innerHTML += `<a-text
+        value="This content will always face you."
+        look-at="[gps-camera]"
+        scale="120 120 120"
+        gps-entity-place="longitude: ${useLong}; latitude: ${useLat};"
+      ></a-text>`;
 
         console.log(document.querySelector("a-scene"));
 
@@ -38,5 +50,5 @@ if (navigator.geolocation) {
     });
 } else {
     document.body.innerHTML =
-        "<h3>Geolocation is not supported by this browser. View this site from another browser.</h3>";
+        "<h3>Geolocation is not supported by this browser. Try this website from another browser.</h3>";
 }
