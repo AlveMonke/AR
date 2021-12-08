@@ -14,14 +14,14 @@ if (navigator.geolocation) {
         //     "a-scene"
         // ).innerHTML += `<a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: ${useLong}; latitude: ${useLat};" animation-mixer look-at="[gps-camera]"/>`;
 
-        document.querySelector("a-scene").innerHTML += <a-text
-        value="This content will always face you."
-        look-at="[gps-camera]"
-        scale="120 120 120"
-        gps-entity-place="latitude: 22.61990942334273; longitude: 88.35054311892733;"
-      ></a-text>;
+//         document.querySelector("a-scene").innerHTML += <a-text
+//         value="This content will always face you."
+//         look-at="[gps-camera]"
+//         scale="120 120 120"
+//         gps-entity-place="latitude: 22.61990942334273; longitude: 88.35054311892733;"
+//       ></a-text>;
 
-        console.log(document.querySelector("a-scene"));
+//         console.log(document.querySelector("a-scene"));
 
         // console.log(useLat, useLong);
 
